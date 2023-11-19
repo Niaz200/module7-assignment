@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\UserController;
+
+use App\Http\Controllers\ProfileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,4 +19,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/hello', [UserController::class, 'gretting']);
+Route::get('/profile/{id}', [ProfileController::class, 'index']);
+
+
+
+
